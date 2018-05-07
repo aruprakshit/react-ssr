@@ -6,6 +6,8 @@ import { Provider } from 'react-redux';
 import Routes from '../client/Routes';
 
 export default (req, store) => {
+  console.log(req.path);
+  
   const content = renderToString(
     <Provider store={store}>
       <StaticRouter location={req.path} context={{}}>
